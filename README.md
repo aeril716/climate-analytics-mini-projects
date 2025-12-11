@@ -62,22 +62,22 @@ Sea level rise influences storm surge risk, tidal flooding, and long-term coasta
 ➡️ Notebook: `02_sea_level_trend.ipynb`
 
 ---
-## 📂 Repository Structure
+## 📁 Repository Structure
+
+```
 climate-analytics-mini-projects/
-│
 ├── data/
 │   ├── noaa_temperature.csv
 │   └── sea_level.csv
-│
 ├── notebooks/
 │   ├── 01_extreme_heat.ipynb
 │   └── 02_sea_level_trend.ipynb
-│
 ├── figures/
 │   ├── heat_trend.png
 │   └── sea_level_trend.png
-│
 └── README.md
+```
+
 
 
 ## 📌 Why These Projects Matter

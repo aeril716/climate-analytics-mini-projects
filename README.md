@@ -1,35 +1,57 @@
-# Climate Analytics Mini Projects
+# climate-analytics-mini-projects
 
-Small climate analytics mini-projects using open datasets (e.g., NOAA).  
-Focus: building practical skills in **Python data analysis + visualization**, with a path toward **climate risk metrics**.
+Mini projects that build practical climate-risk analytics skills using **Python + GIS** (in progress).
+Focus: **physical climate signals → analysis → communication-ready figures**.
 
-## 1) Heat (v0)
-**Current focus (v0):** background warming trend + early ENSO overlay experiments.
+This repo is structured as a growing set of small, versioned studies.  
+Right now, the main completed deliverable is **Heat (v0)**.
 
-**What I’ve done so far**
-- Computed monthly/annual temperature summaries (baseline warming signal)
-- Built initial visualizations and tested ENSO (ONI) shading overlays
+---
 
-**Why this exists**
-This is a foundation project that will be expanded into **extreme heat risk metrics** (v1) and later scaled/automated during UIUC coursework (v2).
+## Projects
 
-**Next milestone (v1) — Extreme Heat Frequency**
-- Use daily **TMAX**
-- Define an extreme threshold (e.g., 95th percentile with a fixed baseline period)
-- Compute annual counts of extreme-heat days and compare early vs. recent periods
+### 1) Heat (v0 complete)
+A starter analysis using station temperature data to:
+- clean + aggregate to monthly values,
+- visualize long-term warming behavior,
+- overlay **ENSO phase (ONI-based shading)** to show climate context.
 
-_Notebooks_
-- `notebooks/00_warming_trend.ipynb` (v0)
-- `notebooks/01_extreme_heat.ipynb` (planned v1)
+➡️ Details: `heat/README.md`  
+📁 Code: `heat/notebooks/`  
+🖼️ Figures: `heat/figures/`
 
-## 2) SLR + Flood (in progress)
-GIS + data-driven mini project exploring coastal flood/SLR exposure and overlap logic.  
-Details will be added after Heat v1 is locked.
+**Status:** ✅ v0 done | ⏳ v1 planned
 
-## Repo Structure
-- `notebooks/` — Jupyter notebooks
-- `figures/` — exported plots
+---
 
-## Data
-- NOAA daily station data (TMAX/TMIN/TAVG)
-- ENSO index (ONI) for overlay experiments (v0)
+## Repo structure
+
+```text
+climate-analytics-mini-projects/
+  heat/
+    notebooks/
+    figures/
+    README.md
+  slr-flood/              # planned
+    qgis/
+    notebooks/
+    figures/
+  README.md
+  requirements.txt
+```
+
+## How to run
+Create an environment and install requirements:
+
+```bash
+pip install -r requirements.txt
+```
+Open notebooks inside each project folder (e.g., heat/notebooks/).
+
+## Notes
+- Datasets used here are public/open.
+- Output figures are saved under each project’s figures/ folder.
+- Each project will evolve in versions (v0 → v1 → v2) as the skill stack grows.
+
+## Author
+Aeri Lee (San Francisco, CA) — building climate risk analytics projects (Python + GIS)

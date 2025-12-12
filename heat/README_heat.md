@@ -1,8 +1,4 @@
 
----
-
-## ✅ 2) `/heat/README.md`
-```md
 # Heat project (v0)
 
 ## What this is

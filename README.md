@@ -1,70 +1,55 @@
-# 🌎 Climate Analytics Mini Projects  
-Light-weight data science projects exploring climate signals using Python.  
-Aimed at building practical skills for data analysis, visualization, and early-stage climate risk reasoning.
+# 🌎 Climate Analytics Mini Projects
+Small, reproducible climate risk analytics projects in Python focused on physical hazards and their implications for infrastructure and business continuity.
+
+**Projects:** Extreme Heat Frequency • Sea Level Trend & Acceleration  
+**Data:** NOAA • NASA/NOAA (public open datasets)  
+**Tools:** Python (pandas, numpy, matplotlib)
 
 ---
 
-## 📁 Project Overview  
-This repository contains small, focused climate analytics exercises using open datasets (NOAA, NASA, CSIRO).  
-The goal is to practice:
-- Python data wrangling (pandas, numpy)
-- Time series processing
-- Basic statistical reasoning (percentiles, trends)
-- Visualization for scientific storytelling
-- Climate-domain framing (hazard → change → implications)
-
-<p style="font-size:14px; font-weight:normal;">
-These projects focus on small, well-defined workflows that mirror real climate analytics tasks—data sourcing, cleaning, hazard analysis, and basic visualization—while keeping the scope compact and reproducible.
-</p>
+## Why this repo
+These notebooks mirror early-stage climate risk workflows: data sourcing → cleaning → threshold/trend analysis → interpretation → stakeholder-ready visuals.
 
 ---
 
-## 🔥 Projects Included
+## Projects
 
-### 1️⃣ **Extreme Heat Frequency Analysis (1980–2024)**
-**Goal:**  
-Examine how extreme heat events have changed over time by comparing the frequency of high-percentile temperature days in early vs. recent decades.
+### 1) Extreme Heat Frequency Analysis (1980–2024)
+**Question:** Have high-heat days become more frequent over time?
 
-**Key steps:**  
-- Load NOAA daily temperature data  
-- Define a heatwave threshold (e.g., 95th percentile)  
-- Compute annual counts of extreme heat days  
-- Compare 1980–1999 vs. 2000–2024  
-- Visualize year-to-year variability and long-term trends  
+**Approach**
+- Use daily temperature data (NOAA)
+- Define an extreme threshold (e.g., 95th percentile)
+- Compute annual counts of extreme-heat days
+- Compare earlier vs. recent periods + visualize variability/trend
 
-**Skills practiced:**  
-`pandas`, time series grouping, percentiles, anomaly detection, line plots  
+**Outputs**
+- Annual extreme-heat day counts (time series)
+- Comparison across periods (e.g., 1980–1999 vs. 2000–2024)
+- Figures saved to `/figures`
 
-**Climate relevance:**  
-Extreme heat is one of the fastest-growing hazards affecting energy demand, health risks, agriculture, and transportation reliability.
+➡️ Notebook: `notebooks/01_extreme_heat.ipynb`
 
-➡️ Notebook: `01_extreme_heat.ipynb`
+### 2) Sea Level Rise: Trend & Acceleration Check
+**Question:** Is sea level rise accelerating in recent decades?
 
----
+**Approach**
+- Load long-term sea level time series (NASA/NOAA)
+- Compute annual + rolling averages
+- Fit linear trends to early vs. recent periods
+- Compare rate differences (mm/year)
 
-### 2️⃣ **Sea Level Rise: Trend & Acceleration Check**
-**Goal:**  
-Analyze long-term global sea level data to assess the rate of change and whether recent decades show signs of acceleration.
+**Outputs**
+- Long-term sea level trend plot
+- Early vs. recent slope comparison
+- Figures saved to `/figures`
 
-**Key steps:**  
-- Load NASA/NOAA sea level dataset  
-- Compute annual and rolling averages  
-- Fit linear trends to early vs. recent periods  
-- Compare slope differences (mm/year)  
-- Visualize long-term change  
-
-**Skills practiced:**  
-`pandas`, `numpy.polyfit`, rolling means, time-series visualization  
-
-**Climate relevance:**  
-Sea level rise influences storm surge risk, tidal flooding, and long-term coastal infrastructure planning.
-
-➡️ Notebook: `02_sea_level_trend.ipynb`
+➡️ Notebook: `notebooks/02_sea_level_trend.ipynb`
 
 ---
-## 📁 Repository Structure
 
-```
+## Repo structure
+```text
 climate-analytics-mini-projects/
 ├── data/
 │   ├── noaa_temperature.csv
@@ -75,40 +60,21 @@ climate-analytics-mini-projects/
 ├── figures/
 │   ├── heat_trend.png
 │   └── sea_level_trend.png
+├── requirements.txt
 └── README.md
 ```
 
-
-
-## 📌 Why These Projects Matter
-
-These light projects help build foundations used in:
-
-Climate risk screening
-Adaptation analytics
-ESG / sustainability data roles
-Physical hazard analysis (extreme heat, sea level rise)
-Time-series based forecasting models
-Scientific communication
-
-They mirror early steps of what is done in larger climate assessments:
-data → cleaning → threshold/trend → interpretation → implications.
-
-## 🛠️ Environment Setup
-
-Install dependencies:
+## Reproducibility
+Install the minimal Python dependencies used in the notebooks:
 
 ```bash
-pip install pandas numpy matplotlib seaborn
+pip install -r requirements.txt
 ```
 
-## ☕️ Notes
+## Notes / limitations 
+- These are lightweight, transparent analyses intended for rapid iteration and clear communication.
+- Assumptions (thresholds, periods, smoothing windows) are documented in each notebook.
 
-These mini-projects are intentionally small and simple — the goal is to build momentum, practice core climate-analytics workflows, and keep things lightweight.
-Future additions may include rainfall-extreme analysis, drought indicators, wildfire weather metrics, or energy-demand correlations.
-
-## 👩🏻‍💻 Author
-
-Aeri Lee
-Climate analytics learner • Pivoting into data & climate risk
-📍 San Francisco, CA
+## Author
+Aeri Lee — San Francisco  
+Building climate risk analytics projects with Python + GIS (heat, sea level rise/flooding, wildfire)
